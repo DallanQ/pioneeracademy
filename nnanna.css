@@ -155,12 +155,12 @@ input, select, textarea {
 
 		a:hover {
 			text-decoration: none;
-			background-color: #e6ebe8;
+			color: #46300e;
 		}
 
 	b, strong {
 		font-weight: 700;
-		color: #6b7770;
+		color: #537c64;
 	}
 
 	i, em {
