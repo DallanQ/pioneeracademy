@@ -194,41 +194,11 @@ function initMobileMenu() {
     });
 }
 
-// function clearOnReload() {
-//     window.addEventListener('beforeunload', function() {
-//         // Remove dynamically created elements, like the loading bar or preloader
-//         const loadingBar = document.querySelector('.loading-bar');
-//         const preloader = document.querySelector('#preloader');
-//         const loader = document.querySelector('#loader');
-//         const navbar = document.querySelector('.navbar');
-        
-//         if (loadingBar) {
-//             loadingBar.remove();  
-//         }
-        
-//         if (preloader) {
-//             preloader.remove();  
-//         }
-
-//         if (loader) {
-//             loader.remove();  
-//         }
-
-//         if (navbar) {
-//             navbar.style.visibility = 'hidden';
-//             navbar.style.opacity = 0;
-//         }
-
-//     });
-// }
-
-
-// Initialize All Functions
+// Initialize All Animations
 function init() {
     initPreloader();
     initSmoothScroll();
     initMobileMenu();
-    // clearOnReload();
     
     // Debounced resize handler
     window.addEventListener('resize', utils.debounce(() => {
@@ -236,6 +206,7 @@ function init() {
     }, 250));
 }
 
+// Start Initialization
 try {
     init();
 } catch (error) {
