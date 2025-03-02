@@ -8,8 +8,8 @@
 
 body {
     line-height: 1.8;
-    color: #e5e7eb; /* Light gray for text (WCAG AA on #0d1117: ~4.5:1) */
-    background: #0d1117; /* Darkest background from overview */
+    color: #e5e7eb; 
+    background: #0d1117; 
     overflow-x: hidden;
 }
 
@@ -123,12 +123,12 @@ body {
     border-radius: 12px;
     box-shadow: 0 8px 25px rgba(0, 0, 0, 0.4), 0 0 15px rgba(56, 178, 172, 0.1);
     margin-bottom: 40px;
-    border: 1px solid #4a5568; /* Border color from overview (WCAG AA with #e5e7eb: ~4.5:1) */
+    border: 1px solid #4a5568; 
 }
 
 .page-content header h2 {
     font-size: 2.5rem;
-    color: #38b2ac; /* Teal from overview (WCAG AA on #21262d: ~4.5:1) */
+    color: #38b2ac;
     margin-bottom: 25px;
     text-transform: uppercase;
     letter-spacing: 1px;
@@ -155,14 +155,14 @@ body {
 
 .page-content header p {
     font-size: 1.5rem;
-    color: #d1d5db; /* Adjusted to darker gray for better contrast on #21262d (WCAG AA: ~4.5:1) */
+    color: #d1d5db; 
     margin-bottom: 30px;
     font-style: italic;
 }
 
 .page-content section p {
     font-size: 1.1rem;
-    color: #e5e7eb; /* Light gray (WCAG AA on #21262d: ~4.5:1) */
+    color: #e5e7eb; 
     max-width: 900px;
     margin: 0 auto;
 }
@@ -174,14 +174,13 @@ body {
     }
 }
 
-/* Features Section */
 .features {
     margin-bottom: 60px;
 }
 
 h2.major {
     font-size: 2.2rem;
-    color: #38b2ac; /* Teal from overview (WCAG AA on #0d1117: ~4.5:1) */
+    color: #38b2ac; 
     text-align: center;
     margin-bottom: 50px;
     position: relative;
@@ -189,33 +188,31 @@ h2.major {
 }
 
 h2.major span {
-    background: #2d3748; /* Darker gray from overview (kept for header) */
+    background: #2d3748; 
     padding: 10px 25px;
     border-radius: 8px;
-    color: #f56565; /* Red from overview (WCAG AA on #2d3748: ~4.5:1) */
+    color: #f56565; 
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3), 0 0 10px rgba(245, 101, 101, 0.2);
-    border: 1px solid #4a5568; /* Border from overview (WCAG AA with #e5e7eb: ~4.5:1) */
+    border: 1px solid #4a5568; 
 }
 
-/* Feature Cards with White Backgrounds */
 .feature-card {
-    background: #ffffff; /* White background for all feature cards */
+    background: #ffffff; 
     padding: 25px;
     border-radius: 12px;
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3), 0 0 10px rgba(56, 178, 172, 0.1);
-    border: 1px solid #4a5568; /* Border color from overview (WCAG AA with #000000: ~4.5:1) */
+    border: 1px solid #4a5568; 
     transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
     position: relative;
     overflow: hidden;
-    color: #000000; /* Black text for contrast on white (WCAG AA: ~21:1, AAA pass) */
+    color: #000000; 
 }
 
-/* Adjust text color for white backgrounds */
 .feature-card h3,
 .feature-card p,
 .feature-card ul,
 .feature-card ul li {
-    color: #000000; /* Black text for readability on white (WCAG AA: ~21:1) */
+    color: #000000; 
 }
 
 .feature-card::before {
@@ -237,22 +234,20 @@ h2.major span {
 .feature-card:hover {
     transform: translateY(-8px);
     box-shadow: 0 12px 30px rgba(0, 0, 0, 0.5), 0 0 20px rgba(56, 178, 172, 0.3);
-    border-color: #f56565; /* Red from overview (WCAG AA on #ffffff: ~4.5:1) */
+    border-color: #f56565; 
 }
 
-/* Specific Styling for Proven Track Record (No Images) */
 .features:nth-child(2) .feature-card {
-    padding-top: 15px; /* Reduce padding to compensate for missing images */
+    padding-top: 15px; 
 }
 
-/* Feature Cards with Images (Why Our Graduates Stand Out, etc.) */
 .card-image {
     width: 100%;
-    height: 150px; /* Consistent height for all cards with images */
-    object-fit: contain; /* Ensures the entire image fits, maintaining aspect ratio */
+    height: 150px; 
+    object-fit: contain; 
     border-radius: 8px;
     margin-bottom: 20px;
-    background: #4a5568; /* Border color as fallback background (WCAG AA with #000000: ~4.5:1) */
+    background: #4a5568; 
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
@@ -261,12 +256,10 @@ h2.major span {
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3), 0 0 15px rgba(56, 178, 172, 0.2);
 }
 
-/* Adjust list bullet color for white backgrounds */
 .feature-card ul li::before {
-    color: #d53f8c; /* Pink from overview (WCAG AA on #ffffff: ~4.5:1) */
+    color: #d53f8c; 
 }
 
-/* Special Styling for Speak Card */
 .speak-card {
     display: flex;
     align-items: center;
@@ -276,9 +269,9 @@ h2.major span {
 .speak-card .card-image {
     width: 300px;
     height: 200px;
-    object-fit: contain; /* Ensures the entire image fits */
+    object-fit: contain; 
     margin-right: 30px;
-    background: #4a5568; /* Border color as fallback background (WCAG AA with #000000: ~4.5:1) */
+    background: #4a5568; 
     border-radius: 12px;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3), 0 0 15px rgba(56, 178, 172, 0.2);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
@@ -295,23 +288,23 @@ h2.major span {
 
 .speak-content p {
     font-size: 1.1rem;
-    color: #000000; /* Black text for contrast on white (WCAG AA: ~21:1, AAA pass) */
+    color: #000000; 
 }
 
 .speak-content strong {
-    color: #f56565; /* Red from overview (WCAG AA on #ffffff: ~4.5:1) */
+    color: #f56565; 
     text-shadow: 0 0 5px rgba(245, 101, 101, 0.2);
 }
 
 .speak-content a {
-    color: #38b2ac; /* Teal from overview (WCAG AA on #ffffff: ~4.5:1) */
+    color: #38b2ac; 
     text-decoration: none;
     font-weight: 500;
     transition: color 0.3s ease, text-shadow 0.3s ease;
 }
 
 .speak-content a:hover {
-    color: #d53f8c; /* Pink from overview (WCAG AA on #ffffff: ~4.5:1) */
+    color: #d53f8c;
     text-shadow: 0 0 10px rgba(213, 63, 140, 0.3);
 }
 
@@ -327,7 +320,7 @@ h2.major span {
         height: 200px;
     }
     .card-image, .feature-card {
-        height: 120px; /* Adjusted for smaller screens */
+        height: 120px; 
     }
     .page-content header h2 {
         font-size: 2rem;
@@ -337,10 +330,10 @@ h2.major span {
 
 /* Footer */
 #footer {
-    background: #1a202c; /* Darker background from overview (WCAG AA with #e5e7eb: ~4.5:1) */
-    color: #e5e7eb; /* Light gray from overview (WCAG AA on #1a202c: ~4.5:1) */
+    background: #1a202c; 
+    color: #e5e7eb; 
     padding: 80px 0 30px;
-    border-top: 1px solid #4a5568; /* Border from overview (WCAG AA with #e5e7eb: ~4.5:1) */
+    border-top: 1px solid #4a5568; 
 }
 
 .gtr-200 {
@@ -365,7 +358,7 @@ h2.major span {
 
 #footer ul li::before {
     content: '>';
-    color: #d53f8c; /* Pink from overview (WCAG AA on #1a202c: ~4.5:1) */
+    color: #d53f8c; 
     position: absolute;
     left: 0;
 }
@@ -373,7 +366,7 @@ h2.major span {
 .button.large {
     display: inline-block;
     padding: 14px 40px;
-    background: linear-gradient(to right, #38b2ac, #f56565); /* Teal to red from overview (WCAG AA with #fff: ~4.5:1) */
+    background: linear-gradient(to right, #38b2ac, #f56565); 
     color: #fff;
     text-decoration: none;
     border-radius: 8px;
@@ -389,13 +382,13 @@ h2.major span {
 }
 
 #footer a {
-    color: #38b2ac; /* Teal from overview (WCAG AA on #1a202c: ~4.5:1) */
+    color: #38b2ac; 
     text-decoration: none;
     transition: color 0.3s ease, text-shadow 0.3s ease;
 }
 
 #footer a:hover {
-    color: #f56565; /* Red from overview (WCAG AA on #1a202c: ~4.5:1) */
+    color: #f56565; 
     text-shadow: 0 0 10px rgba(245, 101, 101, 0.3);
 }
 
@@ -425,13 +418,13 @@ h2.major span {
 }
 
 .social-icon {
-    color: #e5e7eb; /* Light gray from overview (WCAG AA on #1a202c: ~4.5:1) */
+    color: #e5e7eb; 
     font-size: 1.8rem;
     transition: color 0.3s ease, transform 0.3s ease, text-shadow 0.3s ease;
 }
 
 .social-icon:hover {
-    color: #d53f8c; /* Pink from overview (WCAG AA on #1a202c: ~4.5:1) */
+    color: #d53f8c; 
     transform: scale(1.2);
     text-shadow: 0 0 10px rgba(213, 63, 140, 0.3);
 }
