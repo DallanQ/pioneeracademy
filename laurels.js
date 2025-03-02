@@ -23,139 +23,139 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 // Preloader
-const clPreloader = () => {
-  document.documentElement.classList.add('cl-preload');
+// const clPreloader = () => {
+//   document.documentElement.classList.add('cl-preload');
 
-  window.addEventListener('load', () => {
-    document.getElementById('loader').fadeOut('slow', () => {
-      document.getElementById('preloader').delay(300).fadeOut('slow');
-    });
+//   window.addEventListener('load', () => {
+//     document.getElementById('loader').fadeOut('slow', () => {
+//       document.getElementById('preloader').delay(300).fadeOut('slow');
+//     });
 
-    document.documentElement.classList.remove('cl-preload');
-    document.documentElement.classList.add('cl-loaded');
-  });
-};
+//     document.documentElement.classList.remove('cl-preload');
+//     document.documentElement.classList.add('cl-loaded');
+//   });
+// };
 
-// Menu on Scrolldown
-const clMenuOnScrolldown = () => {
-  const menuTrigger = document.querySelector('.header-menu-toggle');
+// // Menu on Scrolldown
+// const clMenuOnScrolldown = () => {
+//   const menuTrigger = document.querySelector('.header-menu-toggle');
 
-  window.addEventListener('scroll', () => {
-    if (window.scrollY > 150) {
-      menuTrigger.classList.add('opaque');
-    } else {
-      menuTrigger.classList.remove('opaque');
-    }
-  });
-};
+//   window.addEventListener('scroll', () => {
+//     if (window.scrollY > 150) {
+//       menuTrigger.classList.add('opaque');
+//     } else {
+//       menuTrigger.classList.remove('opaque');
+//     }
+//   });
+// };
 
-// Stat Counter
-const clStatCount = () => {
-  const statSection = document.querySelector('.about-stats');
-  const stats = document.querySelectorAll('.stats__count');
+// // Stat Counter
+// const clStatCount = () => {
+//   const statSection = document.querySelector('.about-stats');
+//   const stats = document.querySelectorAll('.stats__count');
 
-  if (statSection) {
-    const waypoint = new IntersectionObserver(entries => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          stats.forEach(stat => {
-            const counter = { Counter: 0 };
-            const target = parseInt(stat.textContent, 10);
-            const duration = 4000;
-            const easing = 'swing';
-            const step = curValue => {
-              stat.textContent = Math.ceil(curValue);
-            };
+//   if (statSection) {
+//     const waypoint = new IntersectionObserver(entries => {
+//       entries.forEach(entry => {
+//         if (entry.isIntersecting) {
+//           stats.forEach(stat => {
+//             const counter = { Counter: 0 };
+//             const target = parseInt(stat.textContent, 10);
+//             const duration = 4000;
+//             const easing = 'swing';
+//             const step = curValue => {
+//               stat.textContent = Math.ceil(curValue);
+//             };
 
-            // Animation logic
-            let startTime;
-            const animate = (timestamp) => {
-              if (!startTime) startTime = timestamp;
-              const progress = Math.min((timestamp - startTime) / duration, 1);
-              const currentValue = counter.Counter + progress * (target - counter.Counter);
-              step(currentValue);
+//             // Animation logic
+//             let startTime;
+//             const animate = (timestamp) => {
+//               if (!startTime) startTime = timestamp;
+//               const progress = Math.min((timestamp - startTime) / duration, 1);
+//               const currentValue = counter.Counter + progress * (target - counter.Counter);
+//               step(currentValue);
 
-              if (progress < 1) {
-                requestAnimationFrame(animate);
-              }
-            };
+//               if (progress < 1) {
+//                 requestAnimationFrame(animate);
+//               }
+//             };
 
-            requestAnimationFrame(animate);
-          });
+//             requestAnimationFrame(animate);
+//           });
 
-          waypoint.unobserve(statSection); // Trigger once only
-        }
-      });
-    });
+//           waypoint.unobserve(statSection); // Trigger once only
+//         }
+//       });
+//     });
 
-    waypoint.observe(statSection);
-  }
-};
+//     waypoint.observe(statSection);
+//   }
+// };
 
-// Smooth Scrolling
-const clSmoothScroll = () => {
-  document.querySelectorAll('.smoothscroll').forEach(anchor => {
-    anchor.addEventListener('click', (e) => {
-      e.preventDefault();
-      const target = document.querySelector(anchor.getAttribute('href'));
+// // Smooth Scrolling
+// const clSmoothScroll = () => {
+//   document.querySelectorAll('.smoothscroll').forEach(anchor => {
+//     anchor.addEventListener('click', (e) => {
+//       e.preventDefault();
+//       const target = document.querySelector(anchor.getAttribute('href'));
 
-      window.scrollTo({
-        top: target.offsetTop,
-        behavior: 'smooth'
-      });
+//       window.scrollTo({
+//         top: target.offsetTop,
+//         behavior: 'smooth'
+//       });
 
-      // Check if menu is open
-      if (document.body.classList.contains('menu-is-open')) {
-        document.querySelector('.header-menu-toggle').click();
-      }
+//       // Check if menu is open
+//       if (document.body.classList.contains('menu-is-open')) {
+//         document.querySelector('.header-menu-toggle').click();
+//       }
 
-      window.location.hash = target.id;
-    });
-  });
-};
+//       window.location.hash = target.id;
+//     });
+//   });
+// };
 
-// Animate On Scroll (AOS)
-const clAOS = () => {
-  AOS.init({
-    offset: 200,
-    duration: 600,
-    easing: 'ease-in-sine',
-    delay: 300,
-    once: true,
-    disable: 'mobile',
-  });
-};
+// // Animate On Scroll (AOS)
+// const clAOS = () => {
+//   AOS.init({
+//     offset: 200,
+//     duration: 600,
+//     easing: 'ease-in-sine',
+//     delay: 300,
+//     once: true,
+//     disable: 'mobile',
+//   });
+// };
 
-// Back to Top
-const clBackToTop = () => {
-  const goTopButton = document.querySelector('.go-top');
-  const pxShow = 500;
-  const fadeInTime = 400;
-  const fadeOutTime = 400;
+// // Back to Top
+// const clBackToTop = () => {
+//   const goTopButton = document.querySelector('.go-top');
+//   const pxShow = 500;
+//   const fadeInTime = 400;
+//   const fadeOutTime = 400;
 
-  window.addEventListener('scroll', () => {
-    if (window.scrollY >= pxShow) {
-      goTopButton.style.display = 'block';
-      goTopButton.style.opacity = 1;
-      goTopButton.style.transition = `opacity ${fadeInTime}ms`;
-    } else {
-      goTopButton.style.display = 'none';
-      goTopButton.style.opacity = 0;
-      goTopButton.style.transition = `opacity ${fadeOutTime}ms`;
-    }
-  });
+//   window.addEventListener('scroll', () => {
+//     if (window.scrollY >= pxShow) {
+//       goTopButton.style.display = 'block';
+//       goTopButton.style.opacity = 1;
+//       goTopButton.style.transition = `opacity ${fadeInTime}ms`;
+//     } else {
+//       goTopButton.style.display = 'none';
+//       goTopButton.style.opacity = 0;
+//       goTopButton.style.transition = `opacity ${fadeOutTime}ms`;
+//     }
+//   });
 
-  goTopButton.addEventListener('click', () => {
-    window.scrollTo({ top: 0, behavior: 'smooth' });
-  });
-};
+//   goTopButton.addEventListener('click', () => {
+//     window.scrollTo({ top: 0, behavior: 'smooth' });
+//   });
+// };
 
-// Initialize
-(() => {
-  clPreloader();
-  clMenuOnScrolldown();
-  clStatCount();
-  clSmoothScroll();
-  clAOS();
-  clBackToTop();
-})();
+// // Initialize
+// (() => {
+//   clPreloader();
+//   clMenuOnScrolldown();
+//   clStatCount();
+//   clSmoothScroll();
+//   clAOS();
+//   clBackToTop();
+// })();
