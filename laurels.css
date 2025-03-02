@@ -31,6 +31,10 @@ footer, header, hgroup, menu, nav, section {
 
 body {
 	line-height: 1;
+	background: -moz-linear-gradient(top, transparent 0%, rgba(0, 0, 0, 0.8) 100%);
+    background: -webkit-linear-gradient(top, transparent 0%, rgba(0, 0, 0, 0.8) 100%);
+    background: linear-gradient(to bottom, transparent 0%, rgba(0, 0, 0, 0.8) 100%);
+    filter: progid: DXImageTransform.Microsoft.gradient( startColorstr='#00000000', endColorstr='#cc000000', GradientType=0);
 }
 
 ol, ul {
@@ -82,8 +86,19 @@ input, select, textarea {
 		box-sizing: inherit;
 	}
 
+	.no-js{
+		
+		background: #000000;
+	
+		
+	}
+
 	body {
-		background: #f2f5f3;
+		/* background: #f2f5f3; */
+		
+		background: #000000;
+		
+		
 	}
 
 		body.is-preload *, body.is-preload *:before, body.is-preload *:after {
@@ -3020,7 +3035,7 @@ body {
 }
 
 .navbar-toggle.is-active .bar:nth-child(1) {
-    transform: rotate(-45deg) translate(-5px, 6px);
+    transform: rotate(45deg) translate(5px, 6px);
 }
 
 .navbar-toggle.is-active .bar:nth-child(2) {
@@ -3028,7 +3043,7 @@ body {
 }
 
 .navbar-toggle.is-active .bar:nth-child(3) {
-    transform: rotate(45deg) translate(-5px, -6px);
+    transform: rotate(-45deg) translate(5px, -6px);
 }
 
 /* Mobile Menu Styles */
@@ -3040,16 +3055,23 @@ body {
     .navbar-menu {
         display: none; /* For mobile, you'd typically use a hamburger menu */
         position: fixed;
-        left: 0;
+        /* left: 0; */
         top: 70px;
+		height: 100%;
         flex-direction: column;
         background-color: white;
-        width: 100%;
+        width: 280px;
         text-align: center;
-        transition: 0.3s;
+        transition: all 0.5s ease;
         box-shadow: 0 10px 27px rgba(0, 0, 0, 0.1);
-        padding: 20px 0;
-        z-index: 1000;
+        padding: 3.6rem 9.6rem 3.6rem 0;
+        z-index: 700;
+		right: 0;
+		justify-items: flex-start;
+		align-items: start;
+        align-content: flex-start;
+		overflow-y: auto;
+    	overflow-x: hidden;
     }
 
     .navbar-menu.active {
@@ -3486,7 +3508,6 @@ footer {
 
 /* ===================================================================
  * # preloader
- *
  * ------------------------------------------------------------------- */
  #preloader {
     position: fixed;
@@ -3512,7 +3533,7 @@ footer {
 }
 
 .line-scale-pulse-out > div {
-    background-color: #39b54a;
+    background-color: #3498db;
     width: 4px;
     height: 35px;
     border-radius: 2px;
@@ -3520,32 +3541,36 @@ footer {
     -webkit-animation-fill-mode: both;
     animation-fill-mode: both;
     display: inline-block;
-    -webkit-animation: line-scale-pulse-out 0.9s -0.6s infinite cubic-bezier(0.85, 0.25, 0.37, 0.85);
-    animation: line-scale-pulse-out 0.9s -0.6s infinite cubic-bezier(0.85, 0.25, 0.37, 0.85);
+	transform-origin: center bottom;
+    -webkit-animation: line-scale-pulse-out 0.9s infinite cubic-bezier(0.85, 0.25, 0.37, 0.85);
+    animation: line-scale-pulse-out 0.9s ease-out infinite cubic-bezier(0.85, 0.25, 0.37, 0.85);
 }
 
 .line-scale-pulse-out > div:nth-child(2), .line-scale-pulse-out > div:nth-child(4) {
-    -webkit-animation-delay: -0.4s !important;
-    animation-delay: -0.4s !important;
+    -webkit-animation-delay: -0.3s !important;
+    animation-delay: -0.3s !important;
 }
 
 .line-scale-pulse-out > div:nth-child(1), .line-scale-pulse-out > div:nth-child(5) {
-    -webkit-animation-delay: -0.2s !important;
-    animation-delay: -0.2s !important;
+    -webkit-animation-delay: -0.15s !important;
+    animation-delay: -0.15s !important;
 }
 
 @-webkit-keyframes line-scale-pulse-out {
     0% {
         -webkit-transform: scaley(1);
         transform: scaley(1);
+		opacity: 1;
     }
     50% {
         -webkit-transform: scaley(0.4);
         transform: scaley(0.4);
+		opacity: 0.7;
     }
     100% {
         -webkit-transform: scaley(1);
         transform: scaley(1);
+		opacity: 1;
     }
 }
 
@@ -3578,3 +3603,46 @@ footer {
     }
 }
 
+/* ------------------------------------------------------------------- 
+ * ## change autocomplete styles in chrome
+ * ------------------------------------------------------------------- */
+ input:-webkit-autofill,
+ input:-webkit-autofill:hover,
+ input:-webkit-autofill:focus input:-webkit-autofill,
+ textarea:-webkit-autofill,
+ textarea:-webkit-autofill:hover textarea:-webkit-autofill:focus,
+ select:-webkit-autofill,
+ select:-webkit-autofill:hover,
+ select:-webkit-autofill:focus {
+	 -webkit-text-fill-color: #39b54a;
+	 transition: background-color 5000s ease-in-out 0s;
+ }
+
+.navbar-scrolled {
+    background-color: rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(10px);
+    transition: background-color 0.3s ease;
+}
+
+.feature-card {
+    opacity: 0;
+    transform: translateY(50px);
+    transition: opacity 0.8s, transform 0.8s;
+}
+
+.no-animate {
+    opacity: 1 !important;
+    transform: none !important;
+}
+
+#loading-bar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 3px;
+    background: linear-gradient(to right, #3498db, #6bbff6);
+    z-index: 9999;
+    transition: width 0.5s ease, opacity 0.5s ease;
+    box-shadow: 0 0 10px rgba(57, 181, 74, 0.7);
+}
