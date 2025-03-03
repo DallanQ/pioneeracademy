@@ -364,18 +364,15 @@ nav ul li a:hover:after {
 .features {
     padding: 100px 0;
     background-color: var(--light-bg);
-    position: relative;
-    overflow: hidden;
 }
 
 .features-container {
-    display: flex;
-    width: 200%; /* 2 slides: 3 cards + 1 card */
-    transition: transform 0.5s ease;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 40px;
 }
 
 .feature-box {
-    flex: 0 0 25%; /* Each card takes 25% of the container (3 cards per slide) */
     background-color: var(--white);
     border-radius: 15px;
     overflow: hidden;
@@ -384,7 +381,6 @@ nav ul li a:hover:after {
     display: flex;
     flex-direction: column;
     height: 500px; /* Fixed height for all cards */
-    margin: 0 10px; /* Add some spacing between cards */
 }
 
 .feature-box:hover {
@@ -392,30 +388,51 @@ nav ul li a:hover:after {
     box-shadow: 0 15px 30px rgba(0,0,0,0.15);
 }
 
-.feature-img1, .feature-img2, .feature-img3, .feature-img4 {
+.feature-img1 {
     height: 200px;
-    width: 100%;
+    width: 100%; 
     background-color: #ddd;
-    background-size: cover;
-    background-repeat: no-repeat;
+    background-image: url('./testimony1.jpg');
+    background-size: cover; 
+    background-repeat: no-repeat; 
     object-fit: cover;
 }
 
-.feature-img1 {
-    background-image: url('./testimony1.jpg');
-}
-
 .feature-img2 {
+    height: 200px;
+    width: 100%; 
+    background-color: #ddd;
     background-image: url('./testimony2.jpg');
+    background-size: cover; 
+    background-repeat: no-repeat; 
+    object-fit: cover;
 }
 
 .feature-img3 {
+    height: 200px;
+    width: 100%; 
+    background-color: #ddd;
     background-image: url('./testimony1.jpg');
+    background-size: cover; 
+    background-repeat: no-repeat; 
+    object-fit: cover;
 }
 
+
+
 .feature-img4 {
+    height: 200px;
+    width: 100%; 
+    background-color: #ddd;
     background-image: url('./testimony2.jpg');
+    background-size: cover; 
+    background-repeat: no-repeat; 
+    object-fit: cover;
 }
+
+
+
+
 
 .feature-content {
     padding: 25px;
@@ -501,35 +518,6 @@ nav ul li a:hover:after {
     transform: rotate(180deg);
 }
 
-/* Carousel Navigation */
-.carousel-nav {
-    text-align: center;
-    margin-top: 20px;
-}
-
-.carousel-nav a {
-    display: inline-block;
-    padding: 10px 20px;
-    background-color: var(--primary-color);
-    color: var(--white);
-    border-radius: 50px;
-    margin: 0 5px;
-    text-decoration: none;
-    transition: var(--transition);
-}
-
-.carousel-nav a:hover {
-    background-color: var(--primary-light);
-}
-
-/* Carousel Slide Transitions */
-#slide1:target ~ .features-container {
-    transform: translateX(-5%);
-}
-
-#slide2:target ~ .features-container {
-    transform: translateX(-50%); /* Move to the second slide (3 cards width) */
-}
 /* Testimonials Section */
 .testimonials {
     padding: 120px 0;
