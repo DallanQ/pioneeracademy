@@ -528,7 +528,7 @@ nav ul li a:hover:after {
 }
 
 #slide2:target ~ .features-container {
-    transform: translateX(-50%); /* Move to the second slide (3 cards width) */
+    transform: translateX(-50%); 
 }
 /* Testimonials Section */
 .testimonials {
