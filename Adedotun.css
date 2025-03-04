@@ -935,14 +935,14 @@ header.scrolled {
 
 @media screen and (max-width: 480px) {
     .section-title h2 {
-        font-size: 1rem;
+        font-size: 10px;
     }
     .join-content {
-        padding: 20px;
+        padding: 10px;
         border-radius: 15px;
     }
     .join-content p {
-        font-size: 1.5rem;
+        font-size: 1.3rem;
     }
     .join-content .btn {
         font-size: 0.9rem;
