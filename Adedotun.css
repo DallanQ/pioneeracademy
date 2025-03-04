@@ -34,8 +34,10 @@ a {
     transition: var(--transition);
 }
 
-a:hover {
-    color: var(--primary-light);
+
+
+h2 {
+    color: #264653;
 }
 
 .container {
@@ -359,6 +361,7 @@ header.scrolled {
     text-align: center;
     margin-bottom: 60px;
     position: relative;
+   
 }
 
 .section-title h2 {
@@ -456,6 +459,10 @@ header.scrolled {
     border-radius: 50%;
     border: 2px solid var(--primary-color);
     animation: pulse 2s infinite;
+}
+
+.section-title {
+
 }
 
 @keyframes pulse {
@@ -644,12 +651,119 @@ header.scrolled {
 
 /* Carousel Slide Transitions */
 #slide1:target ~ .features-container {
-    transform: translateX(-5%);
+    transform: translateX(-8%);
 }
 
 #slide2:target ~ .features-container {
-    transform: translateX(-50%); 
+    transform: translateX(-25%); 
 }
+
+#slide3:target ~ .features-container {
+    transform: translateX(-35%);
+}
+
+#slide4:target ~ .features-container {
+    transform: translateX(-45%); 
+}
+
+
+@media screen and (max-width: 1024px) {
+    
+    .join-content {
+        padding: 30px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    #slide1:target ~ .features-container {
+        transform: translateX(0%);
+    }
+    
+    #slide2:target ~ .features-container {
+        transform: translateX(-15%); 
+    }
+    
+    #slide3:target ~ .features-container {
+        transform: translateX(-35%);
+    }
+    
+    #slide4:target ~ .features-container {
+        transform: translateX(-55%); 
+    }
+    
+}
+
+@media screen and (max-width: 480px) {
+    #slide1:target ~ .features-container {
+        transform: translateX(0%);
+    }
+    
+    #slide2:target ~ .features-container {
+        transform: translateX(-38%); 
+    }
+    
+    #slide3:target ~ .features-container {
+        transform: translateX(-80%);
+    }
+    
+    #slide4:target ~ .features-container {
+        transform: translateX(-120%); 
+    }
+    .feature-box {
+        flex: 0 0 40%; /* 1 card per slide on mobile */
+    }
+}
+
+
+@media screen and (max-width: 360px) {
+    #slide1:target ~ .features-container {
+        transform: translateX(-2%);
+    }
+    
+    #slide2:target ~ .features-container {
+        transform: translateX(-55%); 
+    }
+    
+    #slide3:target ~ .features-container {
+        transform: translateX(-109%);
+    }
+    
+    #slide4:target ~ .features-container {
+        transform: translateX(-160%); 
+    }
+    .feature-box {
+        flex: 0 0 50%; /* 1 card per slide on mobile */
+    }
+}
+
+/* Highlight the current navigation button */
+.carousel-nav a {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: var(--primary-color);
+    color: var(--white);
+    border-radius: 50px;
+    margin: 0 5px;
+    text-decoration: none;
+    transition: var(--transition);
+}
+
+.carousel-nav a:hover {
+    background-color:#E9C46A;
+}
+
+/* Highlight the active navigation button */
+#slide1:target ~ .container .carousel-nav a[href="#slide1"],
+#slide2:target ~ .container .carousel-nav a[href="#slide2"],
+#slide3:target ~ .container .carousel-nav a[href="#slide3"],
+#slide4:target ~ .container .carousel-nav a[href="#slide4"] {
+    background-color: var(--primary-light);
+    color: var(--white);
+    transform: scale(1.1); /* Optional: Add a slight scale effect */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); /* Optional: Add a shadow */
+}
+
+
 /* Testimonials Section */
 .testimonials {
     padding: 120px 0;
@@ -874,6 +988,7 @@ header.scrolled {
 .join-content .btn {
     margin-top: 10px;
     color:#264653;
+    text-decoration: none;
 }
 .join-program .container {
     width: 100%;
@@ -881,7 +996,7 @@ header.scrolled {
     padding: 20px;
 }
 
-.section-title h2 {
+.section-title-join h2 {
     font-size: 2.5rem;
     color: white;
     
@@ -906,10 +1021,7 @@ header.scrolled {
 
 /* Responsive Adjustments */
 @media screen and (max-width: 1024px) {
-    .section-title h2 {
-        font-size: 2rem;
-        color: white;
-    }
+    
     .join-content {
         padding: 30px;
     }
@@ -957,8 +1069,8 @@ header.scrolled {
 
 
 @media screen and (max-width: 359px) {
-    .link-info {
-        font: 10px;
+    .more-info a {
+        font-size: 10px;
     }
 }
 
