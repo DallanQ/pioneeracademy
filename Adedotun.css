@@ -204,8 +204,6 @@ header.scrolled {
 }
 
 /* Responsive Breakpoints */
-
-/* Responsive Breakpoints */
 @media screen and (max-width: 768px) {
     .desktop-nav {
         display: none;
@@ -873,7 +871,7 @@ header.scrolled {
 .join-program .container {
     width: 100%;
     max-width: 1200px;
-    padding: 20px;
+    padding: 1px;
 }
 
 .section-title h2 {
@@ -923,14 +921,16 @@ header.scrolled {
 
 @media screen and (max-width: 480px) {
     .section-title h2 {
-        font-size: 1.5rem;
+        font-size: 1.1rem;
     }
+
     .join-content {
         padding: 20px;
         border-radius: 15px;
+        font-size: 0.6rem;
     }
     .join-content p {
-        font-size: 1rem;
+        font-size: 0.6rem;
     }
     .join-content .btn {
         font-size: 0.9rem;
