@@ -151,7 +151,7 @@
                                 <li>Data Engineering Pipelines: Complete solutions designed for efficiency.</li>
                                 <li>AI/ML Models: Real-world business solutions with end-to-end implementation and deployment using generative AI and machine learning models.</li>
                             </ul>
-                            <label for="read-more-1" class="read-more-btn">Read More</label>
+                            <a href="#feature-1" class="read-more-btn">Read More</a>    
                         </div>
                     </div>
                     <div class="feature-box" id="feature-2">
@@ -164,7 +164,7 @@
                                 <li>Real-World Collaboration: Team-based and individual projects that mirror professional workflows.</li>
                                 <li>Technical Communication: Regular presentations of solutions to peers and industry professionals.</li>
                             </ul>
-                            <label for="read-more-2" class="read-more-btn">Read More</label>
+                            <a href="#feature-2" class="read-more-btn">Read More</a>    
                         </div>
                     </div>
                     <div class="feature-box" id="feature-3">
@@ -175,7 +175,7 @@
                                 <li>Weekly guidance: From our president, a senior developer trained at Harvard University and from Stanford University and deep expertise in cloud computing, machine learning, and AI.</li>
                                 <li>Weekly study sessions: Led by flourishing alumni and exciting industry experts, helping students develop technical, communication, and professional skills.</li>
                             </ul>
-                            <label for="read-more-3" class="read-more-btn">Read More</label>
+                            <a href="#feature-3" class="read-more-btn">Read More</a>   
                         </div>
                     </div>
                     <!-- Second Slide: 1 Card -->
@@ -187,7 +187,7 @@
                                 <li>Hands-on coding exercises and projects: Designed to develop the skills needed to solve real-world problems.</li>
                                 <li>Cutting-edge AI technologies: In Python programming, cloud computing, data science, data engineering, and generative AI, enabling students to deliver impactful solutions.</li>
                             </ul>
-                            <label for="read-more-4" class="read-more-btn">Read More</label>
+                            <a href="#feature-4" class="read-more-btn">Read More</a>    
                         </div>
                     </div>
                 </div>
@@ -200,11 +200,7 @@
                     <a href="#slide4" class="carousel-dot">4</a>
                 </div>
         
-                <!-- Hidden Checkboxes for Read More 
-                <input type="checkbox" id="read-more-1" class="read-more-checkbox">
-                <input type="checkbox" id="read-more-2" class="read-more-checkbox">
-                <input type="checkbox" id="read-more-3" class="read-more-checkbox">
-                <input type="checkbox" id="read-more-4" class="read-more-checkbox">-->
+                
             </div>
         </section>
         <!-- Testimonials Section -->
@@ -282,5 +278,54 @@
                 </div>
             </div>
         </footer>
+
+
+        <script>
+            // JavaScript for Carousel Navigation
+          
+            const carouselDots = document.querySelectorAll('.carousel-dot');
+const featuresContainer = document.querySelector('.features-container');
+
+let screenwidth = window.innerWidth; // Use innerWidth for better accuracy
+console.log(`Screen Width: ${screenwidth}`);
+
+let Dwidth; // Declare it globally
+
+// Define Dwidth based on universal screen sizes
+if (screenwidth <= 360) {
+    Dwidth = 210;
+} else if (screenwidth > 360 && screenwidth <= 480) {
+    Dwidth = 210;
+} else if (screenwidth > 480 && screenwidth <= 786) {
+    Dwidth = 130;
+} else if (screenwidth > 786 && screenwidth <= 1024) {
+    Dwidth = 70;
+} else {
+    Dwidth = 75; // Default value for large screens
+}
+
+console.log(`Dwidth: ${Dwidth}`);
+
+console.log(Dwidth);
+
+carouselDots.forEach((dot, index) => {
+    dot.addEventListener('click', (e) => {
+        e.preventDefault(); // Prevent default anchor behavior
+
+        const slideWidth = Dwidth / carouselDots.length; // Calculate slide width
+        console.log(featuresContainer.className);
+
+        featuresContainer.style.transform = `translateX(-${index * slideWidth}%)`;
+
+        // Highlight the active dot
+        carouselDots.forEach(d => d.classList.remove('active'));
+        dot.classList.add('active');
+    });
+});
+
+// Initialize the first dot as active
+carouselDots[0].classList.add('active');
+
+          </script>
 </body>
 </html>

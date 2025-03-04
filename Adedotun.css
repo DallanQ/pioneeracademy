@@ -605,6 +605,7 @@ header.scrolled {
     transition: var(--transition);
     position: relative;
     overflow: hidden;
+    text-decoration: none; /* Remove underline from anchor tag */
 }
 
 .read-more-btn:hover {
@@ -624,9 +625,7 @@ header.scrolled {
     transition: transform 0.3s ease;
 }
 
-.feature-box.expanded .read-more-btn::after {
-    transform: rotate(180deg);
-}
+
 
 /* Carousel Navigation */
 .carousel-nav {
@@ -680,7 +679,7 @@ header.scrolled {
     }
     
     #slide2:target ~ .features-container {
-        transform: translateX(-15%); 
+        transform: translateX(-0%); 
     }
     
     #slide3:target ~ .features-container {
@@ -690,46 +689,36 @@ header.scrolled {
     #slide4:target ~ .features-container {
         transform: translateX(-55%); 
     }
-    
+    .feature-box {
+        flex: 0 0 35%; /* 1 card per slide on mobile */
+    }
 }
+    
+
 
 @media screen and (max-width: 480px) {
-    #slide1:target ~ .features-container {
-        transform: translateX(0%);
-    }
-    
-    #slide2:target ~ .features-container {
-        transform: translateX(-38%); 
-    }
-    
-    #slide3:target ~ .features-container {
-        transform: translateX(-80%);
-    }
-    
-    #slide4:target ~ .features-container {
-        transform: translateX(-120%); 
-    }
+   
     .feature-box {
-        flex: 0 0 40%; /* 1 card per slide on mobile */
+        flex: 0 0 50%; /* 1 card per slide on mobile */
     }
 }
 
 
 @media screen and (max-width: 360px) {
     #slide1:target ~ .features-container {
-        transform: translateX(-2%);
+        transform: translateX(0%);
     }
     
     #slide2:target ~ .features-container {
-        transform: translateX(-55%); 
+        transform: translateX(-30%); 
     }
     
     #slide3:target ~ .features-container {
-        transform: translateX(-109%);
+        transform: translateX(-10%);
     }
     
     #slide4:target ~ .features-container {
-        transform: translateX(-160%); 
+        transform: translateX(-200%); 
     }
     .feature-box {
         flex: 0 0 50%; /* 1 card per slide on mobile */
