@@ -928,7 +928,7 @@ header.scrolled {
         font-size: 1.1rem;
     }
     .join-content .btn {
-        font-size: 1rem;
+        font-size: 1.0rem;
         padding: 12px 30px;
     }
 }
@@ -947,11 +947,12 @@ header.scrolled {
     .join-content .btn {
         font-size: 0.9rem;
         padding: 10px 25px;
+
     }
 }
 
 
-/* Footer */
+/* Footer sss*/
 footer {
     background-color: var(--secondary-color);
     color: var(--white);
