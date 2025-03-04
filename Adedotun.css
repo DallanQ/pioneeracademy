@@ -674,21 +674,7 @@ header.scrolled {
 }
 
 @media screen and (max-width: 768px) {
-    #slide1:target ~ .features-container {
-        transform: translateX(0%);
-    }
-    
-    #slide2:target ~ .features-container {
-        transform: translateX(-0%); 
-    }
-    
-    #slide3:target ~ .features-container {
-        transform: translateX(-35%);
-    }
-    
-    #slide4:target ~ .features-container {
-        transform: translateX(-55%); 
-    }
+   
     .feature-box {
         flex: 0 0 35%; /* 1 card per slide on mobile */
     }
@@ -705,21 +691,7 @@ header.scrolled {
 
 
 @media screen and (max-width: 360px) {
-    #slide1:target ~ .features-container {
-        transform: translateX(0%);
-    }
-    
-    #slide2:target ~ .features-container {
-        transform: translateX(-30%); 
-    }
-    
-    #slide3:target ~ .features-container {
-        transform: translateX(-10%);
-    }
-    
-    #slide4:target ~ .features-container {
-        transform: translateX(-200%); 
-    }
+   
     .feature-box {
         flex: 0 0 50%; /* 1 card per slide on mobile */
     }

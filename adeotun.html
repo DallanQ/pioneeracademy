@@ -284,47 +284,45 @@
             // JavaScript for Carousel Navigation
           
             const carouselDots = document.querySelectorAll('.carousel-dot');
-const featuresContainer = document.querySelector('.features-container');
+            const featuresContainer = document.querySelector('.features-container');
 
-let screenwidth = window.innerWidth; // Use innerWidth for better accuracy
-console.log(`Screen Width: ${screenwidth}`);
+            let screenwidth = window.innerWidth; // Use innerWidth for better accuracy
+            
 
-let Dwidth; // Declare it globally
+            let Dwidth; // Declare it globally
 
-// Define Dwidth based on universal screen sizes
-if (screenwidth <= 360) {
-    Dwidth = 210;
-} else if (screenwidth > 360 && screenwidth <= 480) {
-    Dwidth = 210;
-} else if (screenwidth > 480 && screenwidth <= 786) {
-    Dwidth = 130;
-} else if (screenwidth > 786 && screenwidth <= 1024) {
-    Dwidth = 70;
-} else {
-    Dwidth = 75; // Default value for large screens
-}
+            // Define Dwidth based on universal screen sizes
+            if (screenwidth <= 360) {
+                Dwidth = 210;
+            } else if (screenwidth > 360 && screenwidth <= 480) {
+                Dwidth = 210;
+            } else if (screenwidth > 480 && screenwidth <= 786) {
+                Dwidth = 130;
+            } else if (screenwidth > 786 && screenwidth <= 1024) {
+                Dwidth = 70;
+            } else {
+                Dwidth = 75; // Default value for large screens
+            }
 
-console.log(`Dwidth: ${Dwidth}`);
+          
 
-console.log(Dwidth);
+            carouselDots.forEach((dot, index) => {
+                dot.addEventListener('click', (e) => {
+                    e.preventDefault(); // Prevent default anchor behavior
 
-carouselDots.forEach((dot, index) => {
-    dot.addEventListener('click', (e) => {
-        e.preventDefault(); // Prevent default anchor behavior
+                    const slideWidth = Dwidth / carouselDots.length; // Calculate slide width
+                    console.log(featuresContainer.className);
 
-        const slideWidth = Dwidth / carouselDots.length; // Calculate slide width
-        console.log(featuresContainer.className);
+                    featuresContainer.style.transform = `translateX(-${index * slideWidth}%)`;
 
-        featuresContainer.style.transform = `translateX(-${index * slideWidth}%)`;
+                    // Highlight the active dot
+                    carouselDots.forEach(d => d.classList.remove('active'));
+                    dot.classList.add('active');
+                });
+            });
 
-        // Highlight the active dot
-        carouselDots.forEach(d => d.classList.remove('active'));
-        dot.classList.add('active');
-    });
-});
-
-// Initialize the first dot as active
-carouselDots[0].classList.add('active');
+            // Initialize the first dot as active
+            carouselDots[0].classList.add('active');
 
           </script>
 </body>
