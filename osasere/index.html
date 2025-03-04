@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Pioneer AI Academy is a platform that provides training on Artificial Intelligence and Machine Learning.">
+    <meta http-equiv="author" content="Osasere Ikponmwosa">
+    <title>Pioneer AI Academy </title>
+    <link rel="stylesheet" href="style/index.css">
+    <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
+    <script src="https://cdn.jsdelivr.net/npm/motion@latest/dist/motion.js"></script>
+</head>
+
+
+<body>
+    <nav class="flex justify-between py-2 fixed bg-white w-full">
+        <div class="h-8 flex">
+            <img src="/images/icons/favicon.jpeg" class="h-auto object-contain" alt="PIONEER ACADEMY ICON" srcset="">
+        </div>
+    </nav>
+    <section class="w-full h-screen flex justify-center items-center text-white bg-black">
+        <div id="intro">
+            <div id="welcome">Welcome to</div>
+            <h1 class="pioneer text-6xl font-bold">Pioneer AI Academy</h1>
+            <h3 class="text-xl">Access Elite Tech Talent from West Africa ></h3>
+        </div>
+    </section>
+</body>
+<section class="w-full py-20 flex justify-center items-center text-black bg-white px-">
+    <div style="max-width: 1024px;">
+        <p class="text-xl font-light text-gray-600">Pioneer Academy produces exceptional
+            software
+            engineers and data scientists who are ready to make immediate
+            impacts at
+            forward-thinking companies. Our rigorous 12-month program equips graduates with a powerful combination of
+            Python
+            programming, cloud computing, data science, data engineering, and generative AI skills. Through hands-on
+            projects and
+            AI-enhanced learning methodologies, our graduates deliver real-world solutions that drive results.
+        </p>
+    </div>
+</section>
+<script type="module">
+    const { animate } = window.Motion
+    animate("#welcome", { scale: [0.7, 1] }, { duration: 0.5 })
+    animate(".pioneer", { scale: [0.4, 1] }, { duration: 1 })
+</script>
+</script>
+
+</html>
