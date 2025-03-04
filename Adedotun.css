@@ -929,3 +929,10 @@ footer p {
         font-size: 2.2rem;
     }
 }
+
+@media (max-width: 480px) {
+    
+.join-program {
+    hight: 120vh;
+}
+}
