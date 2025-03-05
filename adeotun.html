@@ -130,9 +130,14 @@
                 <div class="section-title">
                     <h2>WHY OUR GRADUATES STAND OUT</h2>
                 </div>
+        
                 <!-- Carousel Navigation Targets -->
+                
                 <div id="slide1"></div>
                 <div id="slide2"></div>
+                <div id="slide3"></div>
+                <div id="slide4"></div>
+        
                 <!-- Features Container -->
                 <div class="features-container">
                     <!-- First Slide: 3 Cards -->
@@ -146,7 +151,7 @@
                                 <li>Data Engineering Pipelines: Complete solutions designed for efficiency.</li>
                                 <li>AI/ML Models: Real-world business solutions with end-to-end implementation and deployment using generative AI and machine learning models.</li>
                             </ul>
-                            <a href="#feature-1" class="read-more-btn">Read More</a>
+                            <a href="#feature-1" class="read-more-btn">Read More</a>    
                         </div>
                     </div>
                     <div class="feature-box" id="feature-2">
@@ -159,7 +164,7 @@
                                 <li>Real-World Collaboration: Team-based and individual projects that mirror professional workflows.</li>
                                 <li>Technical Communication: Regular presentations of solutions to peers and industry professionals.</li>
                             </ul>
-                            <a href="#feature-2" class="read-more-btn">Read More</a>
+                            <a href="#feature-2" class="read-more-btn">Read More</a>    
                         </div>
                     </div>
                     <div class="feature-box" id="feature-3">
@@ -170,7 +175,7 @@
                                 <li>Weekly guidance: From our president, a senior developer trained at Harvard University and from Stanford University and deep expertise in cloud computing, machine learning, and AI.</li>
                                 <li>Weekly study sessions: Led by flourishing alumni and exciting industry experts, helping students develop technical, communication, and professional skills.</li>
                             </ul>
-                            <a href="#feature-3" class="read-more-btn">Read More</a>
+                            <a href="#feature-3" class="read-more-btn">Read More</a>   
                         </div>
                     </div>
                     <!-- Second Slide: 1 Card -->
@@ -182,18 +187,22 @@
                                 <li>Hands-on coding exercises and projects: Designed to develop the skills needed to solve real-world problems.</li>
                                 <li>Cutting-edge AI technologies: In Python programming, cloud computing, data science, data engineering, and generative AI, enabling students to deliver impactful solutions.</li>
                             </ul>
-                            <a href="#feature-4" class="read-more-btn">Read More</a>
+                            <a href="#feature-4" class="read-more-btn">Read More</a>    
                         </div>
                     </div>
                 </div>
+        
                 <!-- Carousel Navigation Buttons -->
                 <div class="carousel-nav">
-                    <a href="#slide1">1</a>
-                    <a href="#slide2">2</a>
+                    <a href="#slide1" class="carousel-dot">1</a>
+                    <a href="#slide2" class="carousel-dot">2</a>
+                    <a href="#slide3" class="carousel-dot">3</a>
+                    <a href="#slide4" class="carousel-dot">4</a>
                 </div>
+        
+                
             </div>
         </section>
-
         <!-- Testimonials Section -->
         <section class="testimonials" id="testimonials">
             <div class="container">
@@ -239,12 +248,12 @@
             <!-- Join Program Section -->
     <section class="join-program" id="join-program">
         <div class="container">
-            <div class="section-title">
-                <h2>INTERESTED IN JOINING OUR PROGRAM?</h2>
+            <div class="section-title-join">
+                <h2 class="title-join">INTERESTED IN JOINING OUR PROGRAM?</h2>
             </div>
             <div class="join-content animate">
                 <p>Transform your career with our 12-month intensive training. </p>
-                <p class="more-info">Our next cohort starts January 2026. You must be currently enrolled in or be a graduate of <a href="http://byupathway.edu/"> BYU Pathway Worldwide</a>.<br>If you are interested in joining Pioneer Academy, send a copy of your BYU Pathway transcript to <a href="#learn-more">info@pioneeracademy.ai</a></p>
+                <p class="more-info">Our next cohort starts January 2026. You must be currently enrolled in or be a graduate of <a class="link-info" href="http://byupathway.edu/"> BYU Pathway Worldwide</a>.<br>If you are interested in joining Pioneer Academy, send a copy of your BYU Pathway transcript to <a href="#learn-more">info@pioneeracademy.ai</a></p>
                 <a href="mailto:info@pioneeracademy.ai" class="btn">APPLY NOW</a>
             </div>
         </div>
@@ -269,5 +278,52 @@
                 </div>
             </div>
         </footer>
+
+
+        <script>
+            // JavaScript for Carousel Navigation
+          
+            const carouselDots = document.querySelectorAll('.carousel-dot');
+            const featuresContainer = document.querySelector('.features-container');
+
+            let screenwidth = window.innerWidth; // Use innerWidth for better accuracy
+            
+
+            let Dwidth; // Declare it globally
+
+            // Define Dwidth based on universal screen sizes
+            if (screenwidth <= 360) {
+                Dwidth = 210;
+            } else if (screenwidth > 360 && screenwidth <= 480) {
+                Dwidth = 210;
+            } else if (screenwidth > 480 && screenwidth <= 786) {
+                Dwidth = 130;
+            } else if (screenwidth > 786 && screenwidth <= 1024) {
+                Dwidth = 70;
+            } else {
+                Dwidth = 75; // Default value for large screens
+            }
+
+          
+
+            carouselDots.forEach((dot, index) => {
+                dot.addEventListener('click', (e) => {
+                    e.preventDefault(); // Prevent default anchor behavior
+
+                    const slideWidth = Dwidth / carouselDots.length; // Calculate slide width
+                    console.log(featuresContainer.className);
+
+                    featuresContainer.style.transform = `translateX(-${index * slideWidth}%)`;
+
+                    // Highlight the active dot
+                    carouselDots.forEach(d => d.classList.remove('active'));
+                    dot.classList.add('active');
+                });
+            });
+
+            // Initialize the first dot as active
+            carouselDots[0].classList.add('active');
+
+          </script>
 </body>
 </html>

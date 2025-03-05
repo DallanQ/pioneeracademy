@@ -34,8 +34,10 @@ a {
     transition: var(--transition);
 }
 
-a:hover {
-    color: var(--primary-light);
+
+
+h2 {
+    color: #264653;
 }
 
 .container {
@@ -204,7 +206,7 @@ header.scrolled {
 }
 
 /* Responsive Breakpoints */
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 980px) {
     .desktop-nav {
         display: none;
     }
@@ -359,6 +361,7 @@ header.scrolled {
     text-align: center;
     margin-bottom: 60px;
     position: relative;
+   
 }
 
 .section-title h2 {
@@ -456,6 +459,10 @@ header.scrolled {
     border-radius: 50%;
     border: 2px solid var(--primary-color);
     animation: pulse 2s infinite;
+}
+
+.section-title {
+
 }
 
 @keyframes pulse {
@@ -598,6 +605,7 @@ header.scrolled {
     transition: var(--transition);
     position: relative;
     overflow: hidden;
+    text-decoration: none; /* Remove underline from anchor tag */
 }
 
 .read-more-btn:hover {
@@ -617,9 +625,7 @@ header.scrolled {
     transition: transform 0.3s ease;
 }
 
-.feature-box.expanded .read-more-btn::after {
-    transform: rotate(180deg);
-}
+
 
 /* Carousel Navigation */
 .carousel-nav {
@@ -644,12 +650,81 @@ header.scrolled {
 
 /* Carousel Slide Transitions */
 #slide1:target ~ .features-container {
-    transform: translateX(-5%);
+    transform: translateX(-8%);
 }
 
 #slide2:target ~ .features-container {
-    transform: translateX(-50%); 
+    transform: translateX(-25%); 
 }
+
+#slide3:target ~ .features-container {
+    transform: translateX(-35%);
+}
+
+#slide4:target ~ .features-container {
+    transform: translateX(-45%); 
+}
+
+
+@media screen and (max-width: 1024px) {
+    
+    .join-content {
+        padding: 30px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+   
+    .feature-box {
+        flex: 0 0 35%; /* 1 card per slide on mobile */
+    }
+}
+    
+
+
+@media screen and (max-width: 480px) {
+   
+    .feature-box {
+        flex: 0 0 50%; /* 1 card per slide on mobile */
+    }
+}
+
+
+@media screen and (max-width: 360px) {
+   
+    .feature-box {
+        flex: 0 0 50%; /* 1 card per slide on mobile */
+    }
+}
+
+/* Highlight the current navigation button */
+.carousel-nav a {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: var(--primary-color);
+    color: var(--white);
+    border-radius: 50px;
+    margin: 0 5px;
+    text-decoration: none;
+    transition: var(--transition);
+}
+
+.carousel-nav a:hover {
+    background-color:#E9C46A;
+}
+
+/* Highlight the active navigation button */
+#slide1:target ~ .container .carousel-nav a[href="#slide1"],
+#slide2:target ~ .container .carousel-nav a[href="#slide2"],
+#slide3:target ~ .container .carousel-nav a[href="#slide3"],
+#slide4:target ~ .container .carousel-nav a[href="#slide4"] {
+    background-color: var(--primary-light);
+    color: var(--white);
+    transform: scale(1.1); /* Optional: Add a slight scale effect */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); /* Optional: Add a shadow */
+}
+
+
 /* Testimonials Section */
 .testimonials {
     padding: 120px 0;
@@ -866,21 +941,36 @@ header.scrolled {
     text-align: center;
     color: white;
     position: relative;
+    
+
+
 }
 
+.join-content .btn {
+    margin-top: 10px;
+    color:#264653;
+    text-decoration: none;
+}
 .join-program .container {
     width: 100%;
     max-width: 1200px;
-    padding: 1px;
+    padding: 20px;
 }
 
-.section-title h2 {
+.section-title-join h2 {
     font-size: 2.5rem;
-    text-shadow: 0 2px 10px rgba(0,0,0,0.3);
+    color: white;
+    
 }
+
+.join-content a {
+    color: #E9C46A;
+    text-decoration: underline;
+} 
 
 .join-content {
     max-width: 800px;
+    
     margin: 0 auto;
     background-color: rgba(255, 255, 255, 0.1);
     backdrop-filter: blur(10px);
@@ -892,9 +982,7 @@ header.scrolled {
 
 /* Responsive Adjustments */
 @media screen and (max-width: 1024px) {
-    .section-title h2 {
-        font-size: 2rem;
-    }
+    
     .join-content {
         padding: 30px;
     }
@@ -905,7 +993,7 @@ header.scrolled {
         padding: 60px 15px;
     }
     .section-title h2 {
-        font-size: 1.8rem;
+        font-size: 1px;
     }
     .join-content {
         padding: 25px;
@@ -914,159 +1002,40 @@ header.scrolled {
         font-size: 1.1rem;
     }
     .join-content .btn {
-        font-size: 1rem;
+        font-size: 1.0rem;
         padding: 12px 30px;
     }
 }
 
 @media screen and (max-width: 480px) {
     .section-title h2 {
-        font-size: 1.1rem;
+        font-size: 10px;
     }
-
+    .title-join {
+        font-size: 10px;
+    }
     .join-content {
-        padding: 20px;
+        padding: 10px;
         border-radius: 15px;
-        font-size: 0.6rem;
     }
     .join-content p {
-        font-size: 0.6rem;
+        font-size: 1.3rem;
     }
     .join-content .btn {
         font-size: 0.9rem;
         padding: 10px 25px;
+
     }
 }
 
 
-
-.join-program::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: url('/api/placeholder/1200/800') center/cover no-repeat;
-    opacity: 0.1;
-    z-index: 0;
-}
-
-.join-program::after {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: radial-gradient(circle at center, transparent 30%, rgba(0,0,0,0.4) 100%);
-    z-index: 1;
-}
-
-.join-program .section-title {
-    position: relative;
-    z-index: 2;
-}
-
-.join-program .section-title h2 {
-    color: var(--white);
-    font-size: 3rem;
-    text-shadow: 0 2px 10px rgba(0,0,0,0.3);
-}
-
-.join-program .section-title h2:after {
-    background-color: var(--white);
-    width: 100px;
-    height: 4px;
-}
-
-.join-content {
-    max-width: 800px;
-    margin: 0 auto;
-    position: relative;
-    z-index: 2;
-    background-color: rgba(255, 255, 255, 0.1);
-    backdrop-filter: blur(10px);
-    padding: 40px;
-    border-radius: 20px;
-    box-shadow: 0 15px 30px rgba(0,0,0,0.2);
-    border: 1px solid rgba(255, 255, 255, 0.2);
-    animation: pulse-subtle 3s infinite ease-in-out;
-}
-
-@keyframes pulse-subtle {
-    0%, 100% {
-        box-shadow: 0 15px 30px rgba(0,0,0,0.2);
-    }
-    50% {
-        box-shadow: 0 20px 50px rgba(0,0,0,0.3), 0 0 30px rgba(233, 196, 106, 0.3);
+@media screen and (max-width: 359px) {
+    .more-info a {
+        font-size: 10px;
     }
 }
 
-.join-content p {
-    margin-bottom: 30px;
-    font-size: 1.3rem;
-    color: var(--white);
-    line-height: 1.7;
-}
-.more-info {
-    font-size: 0.5rem;
-    line-height: 1;
-
-}
-
-.join-content a:not(.btn) {
-    color: var(--accent-color);
-    font-weight: 600;
-    position: relative;
-}
-
-.join-content a:not(.btn):hover {
-    color: var(--white);
-}
-
-.join-content a:not(.btn)::after {
-    content: '';
-    position: absolute;
-    width: 100%;
-    height: 2px;
-    bottom: -2px;
-    left: 0;
-    background-color: var(--accent-color);
-    transition: var(--transition);
-}
-
-.join-content a:not(.btn):hover::after {
-    background-color: var(--white);
-}
-
-.join-content .btn {
-    font-size: 1.1rem;
-    padding: 15px 40px;
-    margin-top: 10px;
-    background: linear-gradient(to right, var(--accent-color), #f4d58d);
-    border: none;
-    color: var(--secondary-color);
-    box-shadow: 0 10px 20px rgba(0,0,0,0.2);
-    animation: attention 2s infinite;
-}
-
-@keyframes attention {
-    0%, 100% {
-        transform: scale(1);
-    }
-    50% {
-        transform: scale(1.05);
-    }
-}
-
-.join-content .btn:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 15px 30px rgba(0,0,0,0.3);
-    animation: none;
-}
-
-/* Footer */
+/* Footer sss*/
 footer {
     background-color: var(--secondary-color);
     color: var(--white);
