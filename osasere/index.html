@@ -10,39 +10,65 @@
     <title>Pioneer AI Academy </title>
     <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
     <script src="https://cdn.jsdelivr.net/npm/motion@latest/dist/motion.js"></script>
-    <link rel="stylesheet" href="style/index.css">
+    <script src="https://unpkg.com/@dotlottie/player-component@2.7.12/dist/dotlottie-player.mjs" type="module"></script>
+    <style>
+        .w-1200 {
+            max-width: 1200px;
+        }
+
+        .w-1024 {
+            max-width: 1024px;
+        }
+    </style>
 </head>
 
-<body>
-    <nav class="flex justify-between py-2 fixed bg-white w-full">
-        <div class="h-8 flex">
+<body class="text-sm lg:text-lg text-slate-800">
+    <nav class="flex z-10 justify-between items-center py-2 text-sm md:text-xl fixed bg-white w-full px-6">
+        <div class="h-11 flex">
             <img src="/images/icons/favicon.jpeg" class="h-auto object-contain" alt="PIONEER ACADEMY ICON" srcset="">
+            <span class="hidden md:block">
+                <h1 class="text-xl font-bold">Pioneer Artificial Intelligence Academy</h1>
+            </span>
+        </div>
+        <div>
+            <ul class="flex gap-4 justify-center">
+                <li><a href="#">Home</a></li>
+                <li><a href="#about-us">About Us</a></li>
+                <li><a href="#about-us">Connect With Us</a></li>
+            </ul>
         </div>
     </nav>
     <section id="hero"
-        class="grid grid-cols-2 items-center lg:text-start w-full px-4 h-screen text-center text-white bg-slate-800">
-        <div id="intro" class="col-span-full px-10 lg:col-span-1">
-            <h1 class="pioneer text-6xl font-bold">Access Elite Tech Talent from West Africa</h1>
-            <p class="text-xl font-light">We train exceptional software engineers and data scientists
-                ready to make an
-                immediate impact.</p>
-            <div class="flex justify-center lg:justify-start gap-4 pt-4">
-                <a href="#"
-                    class="px-2 py-2 rounded-sm font-bold bg-white hover:bg-gray-800 hover:text-white text-blue-900">Hire
-                    Top Talent</a>
-                <a href="#" class="p-2 flex  rounded-sm font-bold hover:bg-white hover:text-black">Join
-                    Our
-                    Academy <span><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24"
-                            color="inherit" fill="none">
-                            <path d="M20.0001 11.9998L4.00012 11.9998" stroke="currentColor" stroke-width="1.5"
-                                stroke-linecap="round" stroke-linejoin="round" />
-                            <path
-                                d="M15.0003 17C15.0003 17 20.0002 13.3176 20.0002 12C20.0002 10.6824 15.0002 7 15.0002 7"
-                                stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
-                                stroke-linejoin="round" />
-                        </svg></span></a>
+        class="lg:text-start w-full min-h-screen text-center text-white bg-fixed bg-[url('./assets/desola-lanre-ologun-kwzWjTnDPLk-unsplash.jpg')] bg-cover bg-center">
+        <div class="grid grid-cols-2 items-center min-h-screen  bg-slate-800/90 px-4 ">
+            <div id="intro" class="col-span-full px-2 lg:px-8 lg:col-span-1">
+                <h1 class="pioneer text-6xl py-3 font-bold">Access Elite Tech Talent from West Africa</h1>
+                <p class="text-xl font-light py-3">We train exceptional software engineers and data scientists
+                    ready to make an
+                    immediate impact.</p>
+                <div class="flex justify-center lg:justify-start gap-4 pt-4">
+                    <a href="#"
+                        class="px-2 py-2 rounded-sm font-bold bg-white hover:bg-gray-800 hover:text-white text-slate-800">Hire
+                        Top Talent</a>
+                    <a href="#" class="p-2 flex  rounded-sm font-bold hover:bg-white hover:text-gray-800">Join
+                        Our
+                        Academy <span><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24"
+                                color="inherit" fill="none">
+                                <path d="M20.0001 11.9998L4.00012 11.9998" stroke="currentColor" stroke-width="1.5"
+                                    stroke-linecap="round" stroke-linejoin="round" />
+                                <path
+                                    d="M15.0003 17C15.0003 17 20.0002 13.3176 20.0002 12C20.0002 10.6824 15.0002 7 15.0002 7"
+                                    stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
+                                    stroke-linejoin="round" />
+                            </svg></span></a>
+                </div>
+            </div>
+            <div class="col-span-1 hidden lg:block invert">
+                <dotlottie-player src="https://lottie.host/0ec19af2-1888-491d-84a1-c529bb41c6ec/dkX3qk6ACg.lottie"
+                    background="transparent" class="w-full p-10" speed="0.5" loop autoplay></dotlottie-player>
             </div>
         </div>
+
     </section>
 </body>
 <section class="w-full text-slate-800 px-3 py-20 flex justify-center items-center bg-gray-100 px-">
@@ -128,40 +154,19 @@
         </div>
     </div>
 </section>
-<section id="">
-<div class="w-1200">
-    <div>
-        <h3 class="text-3xl font-bold w-full">
-            About Us
-        </h3>
-        <p>
-            Who we are
-        </p>
-    </div>
-    <div>
-        Pioneer Academy produces exceptional software engineers and data scientists who are ready to make immediate
-        impacts at
-        forward-thinking companies. Our rigorous 12-month program equips graduates with a powerful combination of
-        Python
-        programming, cloud computing, data science, data engineering, and generative AI skills. Through hands-on
-        projects and
-        AI-enhanced learning methodologies, our graduates deliver real-world solutions that drive results.
-    </div>
-</div>
-
-</section>
-<section id="about-us" class="flex text-slate-800 justify-center">
+<section id="about-us" class="flex text-center px-4 py-20 text-slate-800 justify-center">
     <div class="w-1200">
-        <div>
-            <h3 class="text-3xl font-bold w-full">
+        <div class="">
+            <h3 class="text-xl lg:text-3xl uppercase font-bold w-full">
                 About Us
             </h3>
-            <p>
+            <p class="text-sm lg:text-lg font-light">
                 Who we are
             </p>
         </div>
-        <div>
-            Pioneer Academy produces exceptional software engineers and data scientists who are ready to make immediate
+        <div class="pt-4 text-justify">
+            <span class="font-semibold">Pioneer Academy</span> produces exceptional software engineers and data
+            scientists who are ready to make immediate
             impacts at
             forward-thinking companies. Our rigorous 12-month program equips graduates with a powerful combination of
             Python
@@ -170,6 +175,444 @@
             AI-enhanced learning methodologies, our graduates deliver real-world solutions that drive results.
         </div>
     </div>
+</section>
+<section class="bg-slate-900 py-20 px-5">
+    <div>
+        <h1 class=" text-xl lg:text-3xl text-center uppercase text-slate-200 font-bold">Why Our Graduates Stand Out</h1>
+    </div>
+    <div class="flex justify-center">
+        <div class="w-1200 ">
+            <div class="grid grid-cols-1 md:grid-cols-2 ">
+                <div class="col-span-1 pt-10 border-b-2  md:border-r-2 border-slate-500">
+                    <div class="flex justify-center">
+                        <div class="bg-white flex p-3 rounded-full">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
+                                stroke-linejoin="round" class="lucide lucide-cog">
+                                <path d="M12 20a8 8 0 1 0 0-16 8 8 0 0 0 0 16Z" />
+                                <path d="M12 14a2 2 0 1 0 0-4 2 2 0 0 0 0 4Z" />
+                                <path d="M12 2v2" />
+                                <path d="M12 22v-2" />
+                                <path d="m17 20.66-1-1.73" />
+                                <path d="M11 10.27 7 3.34" />
+                                <path d="m20.66 17-1.73-1" />
+                                <path d="m3.34 7 1.73 1" />
+                                <path d="M14 12h8" />
+                                <path d="M2 12h2" />
+                                <path d="m20.66 7-1.73 1" />
+                                <path d="m3.34 17 1.73-1" />
+                                <path d="m17 3.34-1 1.73" />
+                                <path d="m11 13.73-4 6.93" />
+                            </svg>
+                        </div>
+                    </div>
+                    <div class="text-center text-slate-200 ">
+                        <h2 class="font-bold text-lg">Technical Excellence</h2>
+                    </div>
+                    <div class="text-start text-slate-200 p-3">
+                        <ul>
+                            <li class="flex py-2">
+                                <span class="pr-2">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                        fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"
+                                        stroke-linejoin="round" class="lucide lucide-circle-check-big">
+                                        <path d="M21.801 10A10 10 0 1 1 17 3.335" />
+                                        <path d="m9 11 3 3L22 4" />
+                                    </svg>
+                                </span>
+                                <span>
+                                    <span class="font-bold">
+                                        Production-Ready Applications:
+                                    </span>
+                                    Complete
+                                    projects that
+                                    meet professional standards.
+                                </span>
+                            </li>
+                            <li class="flex py-2">
+                                <span class="pr-2">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                        fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"
+                                        stroke-linejoin="round" class="lucide lucide-circle-check-big">
+                                        <path d="M21.801 10A10 10 0 1 1 17 3.335" />
+                                        <path d="m9 11 3 3L22 4" />
+                                    </svg>
+                                </span>
+                                <span>
+                                    <span class="font-bold">
+                                        Kaggle Competitions:
+                                    </span>
+                                    Projects showcasing practical expertise in data science.
+                                </span>
+                            </li>
+                            <li class="flex py-2">
+                                <span class="pr-2">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                        fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"
+                                        stroke-linejoin="round" class="lucide lucide-circle-check-big">
+                                        <path d="M21.801 10A10 10 0 1 1 17 3.335" />
+                                        <path d="m9 11 3 3L22 4" />
+                                    </svg>
+                                </span>
+                                <span>
+                                    <span class="font-bold">
+                                        Data Engineering Pipelines:
+                                    </span>
+                                    Scalable systems designed for complex, real-world challenges.
+                                </span>
+                            </li>
+                            <li class="flex py-2">
+                                <span class="pr-2">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                        fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"
+                                        stroke-linejoin="round" class="lucide lucide-circle-check-big">
+                                        <path d="M21.801 10A10 10 0 1 1 17 3.335" />
+                                        <path d="m9 11 3 3L22 4" />
+                                    </svg>
+                                </span>
+                                <span>
+                                    <span class="font-bold">
+                                        AI/ML Models:
+                                    </span>
+                                    Real-world business solutions with end-to-end implementation and deployment using
+                                    generative AI and machine learning
+                                    models.
+                                </span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <!-- second  -->
+                <div class="col-span-1 pt-10 border-b-2 border-slate-500">
+                    <div class="flex justify-center">
+                        <div class="bg-white flex p-3 rounded-full">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
+                                stroke-linejoin="round" class="lucide lucide-briefcase">
+                                <path d="M16 20V4a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16" />
+                                <rect width="20" height="14" x="2" y="6" rx="2" />
+                            </svg>
+                        </div>
+                    </div>
+                    <div class="text-center text-slate-200 ">
+                        <h2 class="font-bold text-lg">Professional Readiness</h2>
+                    </div>
+                    <div class="text-start text-slate-200 p-3">
+                        <ul>
+                            <li class="flex py-2">
+                                <span class="pr-2">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                        fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"
+                                        stroke-linejoin="round" class="lucide lucide-circle-check-big">
+                                        <path d="M21.801 10A10 10 0 1 1 17 3.335" />
+                                        <path d="m9 11 3 3L22 4" />
+                                    </svg>
+                                </span>
+                                <span>
+                                    <span class="font-bold">
+                                        Technical Evaluations:
+                                    </span>
+                                    Rigorous assessments from experienced professionals, ensuring their technical
+                                    proficiency and problem-solving abilities
+                                    meet industry standards.
+                                </span>
+                            </li>
+                            <li class="flex py-2">
+                                <span class="pr-2">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                        fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"
+                                        stroke-linejoin="round" class="lucide lucide-circle-check-big">
+                                        <path d="M21.801 10A10 10 0 1 1 17 3.335" />
+                                        <path d="m9 11 3 3L22 4" />
+                                    </svg>
+                                </span>
+                                <span>
+                                    <span class="font-bold">
+                                        Code Reviews:
+                                    </span>
+                                    Weekly feedback sessions to refine and perfect technical output.
+                                </span>
+                            </li>
+                            <li class="flex py-2">
+                                <span class="pr-2">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                        fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"
+                                        stroke-linejoin="round" class="lucide lucide-circle-check-big">
+                                        <path d="M21.801 10A10 10 0 1 1 17 3.335" />
+                                        <path d="m9 11 3 3L22 4" />
+                                    </svg>
+                                </span>
+                                <span>
+                                    <span class="font-bold">
+                                        Real-World Collaboration:
+                                    </span>
+                                    Team-based and individual projects that mirror professional workflows.
+                                </span>
+                            </li>
+                            <li class="flex py-2">
+                                <span class="pr-2">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                        fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"
+                                        stroke-linejoin="round" class="lucide lucide-circle-check-big">
+                                        <path d="M21.801 10A10 10 0 1 1 17 3.335" />
+                                        <path d="m9 11 3 3L22 4" />
+                                    </svg>
+                                </span>
+                                <span>
+                                    <span class="font-bold">
+                                        Technical Communication:
+                                    </span>
+                                    Regular presentations of solutions to peers and industry professionals.
+                                </span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <!-- third  -->
+                <div class="col-span-1 pt-10 border-b-2 md:border-b-0 md:border-r-2 border-slate-500">
+                    <div class="flex justify-center">
+                        <div class="bg-white flex p-3 rounded-full">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
+                                stroke-linejoin="round" class="lucide lucide-lightbulb">
+                                <path
+                                    d="M15 14c.2-1 .7-1.7 1.5-2.5 1-.9 1.5-2.2 1.5-3.5A6 6 0 0 0 6 8c0 1 .2 2.2 1.5 3.5.7.7 1.3 1.5 1.5 2.5" />
+                                <path d="M9 18h6" />
+                                <path d="M10 22h4" />
+                            </svg>
+                        </div>
+                    </div>
+                    <div class="text-center text-slate-200 ">
+                        <h2 class="font-bold text-lg">Expert Mentorship</h2>
+                    </div>
+                    <div class="text-start text-slate-200 p-3">
+                        <ul>
+                            <li class="flex py-2">
+                                <span class="pr-2">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                        fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"
+                                        stroke-linejoin="round" class="lucide lucide-circle-check-big">
+                                        <path d="M21.801 10A10 10 0 1 1 17 3.335" />
+                                        <path d="m9 11 3 3L22 4" />
+                                    </svg>
+                                </span>
+                                <span>
+                                    <span class="font-bold">
+                                        Weekly guidance:
+                                    </span>
+                                    from our president, a senior developer with a PhD in Computer Science from Stanford
+                                    University and deep expertise in
+                                    cloud computing, machine learning, and AI.
+                                </span>
+                            </li>
+                            <li class="flex py-2">
+                                <span class="pr-2">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                        fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"
+                                        stroke-linejoin="round" class="lucide lucide-circle-check-big">
+                                        <path d="M21.801 10A10 10 0 1 1 17 3.335" />
+                                        <path d="m9 11 3 3L22 4" />
+                                    </svg>
+                                </span>
+                                <span>
+                                    <span class="font-bold">
+                                        Weekly study sessions:
+                                    </span>
+                                    led by bootcamp alumni now excelling as software engineers, where students develop
+                                    technical, communication and
+                                    professional skills. </span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <!-- fourth  -->
+                <div class="col-span-1 pt-10">
+                    <div class="flex justify-center">
+                        <div class="bg-white flex p-3 rounded-full">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round" class="lucide lucide-cog">
+                                <path d="M12 20a8 8 0 1 0 0-16 8 8 0 0 0 0 16Z" />
+                                <path d="M12 14a2 2 0 1 0 0-4 2 2 0 0 0 0 4Z" />
+                                <path d="M12 2v2" />
+                                <path d="M12 22v-2" />
+                                <path d="m17 20.66-1-1.73" />
+                                <path d="M11 10.27 7 3.34" />
+                                <path d="m20.66 17-1.73-1" />
+                                <path d="m3.34 7 1.73 1" />
+                                <path d="M14 12h8" />
+                                <path d="M2 12h2" />
+                                <path d="m20.66 7-1.73 1" />
+                                <path d="m3.34 17 1.73-1" />
+                                <path d="m17 3.34-1 1.73" />
+                                <path d="m11 13.73-4 6.93" />
+                            </svg>
+                        </div>
+                    </div>
+                    <div class="text-center text-slate-200 ">
+                        <h2 class="font-bold text-lg">Practical Experience</h2>
+                    </div>
+                    <div class="text-start text-slate-200 p-3">
+                        <ul>
+                            <li class="flex py-2">
+                                <span class="pr-2">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                        fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"
+                                        stroke-linejoin="round" class="lucide lucide-circle-check-big">
+                                        <path d="M21.801 10A10 10 0 1 1 17 3.335" />
+                                        <path d="m9 11 3 3L22 4" />
+                                    </svg>
+                                </span>
+                                <span>
+                                    <span class="font-bold">
+                                        Hands-on coding exercises and projects:
+                                    </span>
+                                    Robust portfolios that showcase students’ ability to solve real-world problems.
+                                </span>
+                            </li>
+                            <li class="flex py-2">
+                                <span class="pr-2">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                        fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"
+                                        stroke-linejoin="round" class="lucide lucide-circle-check-big">
+                                        <path d="M21.801 10A10 10 0 1 1 17 3.335" />
+                                        <path d="m9 11 3 3L22 4" />
+                                    </svg>
+                                </span>
+                                <span>
+                                    <span class="font-bold">
+                                        Cutting-edge tools and techniques:
+                                    </span>
+                                    in python programming, cloud computing, data science, data engineering, and
+                                    generative AI equip students to deliver
+                                    impactful solutions.
+                                </span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="lg:min-h-screen bg-slate-50 lg:flex lg:justify-center items-center">
+    <div class="flex justify-center items-center px-4 py-20 text-center text-slate-800">
+        <div class="w-1200">
+            <h3 class="text-xl uppercase lg:text-3xl font-bold w-full">
+                Our Graduates Speak for Themselves
+            </h3>
+            <div class="pt-4 text-justify pb-10">
+                Our graduates solve real-world challenges through innovative solutions. Recent projects include
+                AI-Powered Chatbots:
+                Assisting organizations by answering questions using retrieval-augmented generation (RAG). View project
+                presentations on
+                our <a class="underline underline-offset-4 hover:no-underline font-semibold"
+                    href="https://www.youtube.com/@PioneerAIAcademy" target="_blank">YouTube
+                    channel</a> to see the latest work from
+                our graduates.
+            </div>
+            <div class="font-bold text-xl lg:text-3xl lg:text-start py-2 rounded-sm px-2">
+                2024 Capstone Projects
+            </div>
+            <div class="pt-5 grid gap-5 grid-cols-1 md:grid-cols-2">
+                <div class="col-span-1 ">
+                    <iframe class="w-full h-64 rounded-lg md:h-96"
+                        src="https://www.youtube.com/embed/z-100rMH1Cc?list=PL1aKXjBRLHnlTTS77j0zWH63yO3QS_zuS"
+                        title="Promise Igbojionu" frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                        referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                    <h5 class="font-semibold pt-3 text-xl">Promise Igbojionu</h5>
+                </div>
+                <div class="col-span-1 ">
+                    <iframe class="w-full h-64 rounded-lg md:h-96"
+                        src="https://www.youtube.com/embed/HUN3gmNil7g?list=PL1aKXjBRLHnlTTS77j0zWH63yO3QS_zuS"
+                        title="Bamidele Ajayi" frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                        referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                    <h5 class="font-semibold pt-3 text-xl">Bamidele Ajayi</h5>
+                </div>
+            </div>
+            <div class="flex justify-end font-semibold underline-offset-4 underline hover:no-underline"><a class="flex "
+                    href="https://www.youtube.com/playlist?list=PL1aKXjBRLHnlTTS77j0zWH63yO3QS_zuS" target="_blank">view
+                    full
+                    playlist <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24"
+                        color="inherit" fill="none">
+                        <path d="M20.0001 11.9998L4.00012 11.9998" stroke="currentColor" stroke-width="1.5"
+                            stroke-linecap="round" stroke-linejoin="round" />
+                        <path d="M15.0003 17C15.0003 17 20.0002 13.3176 20.0002 12C20.0002 10.6824 15.0002 7 15.0002 7"
+                            stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                    </svg></span></a></a>
+
+            </div>
+        </div>
+    </div>
+</section>
+<section class="bg-slate-200 py-20 px-5">
+
+    <div class="flex justify-center">
+
+        <div class="w-1200 border-l-2 md:border-l-0 border-slate-500 px-2 text-justify">
+            <h3 class="text-xl md:pb-10 pb-3 text-start lg:text-center uppercase lg:text-3xl font-bold w-full">Access
+                Our
+                Talent
+                Pool
+            </h3>
+            <div class="grid grid-cols-1 md:grid-cols-2">
+                <div class="col-span-1 md:border-r-2 px-5 border-slate-500">
+                    <p>
+                        Looking for data professionals who can deliver immediate value to your organization? Connect
+                        with us today to:
+                    </p>
+                    <p class="py-5">
+                        Review graduate portfolios showcasing production-ready work.
+                        Schedule technical interviews with job-ready candidates.
+                        Discuss your unique data science, data engineering, and AI needs with our team.
+                    </p>
+                </div>
+                <div class="col-span-1 px-5">
+                    <h4 class="lg:text-xl text-sm font-bold uppercase">
+                        Contact Information
+                    </h4>
+                    <p class="py-5">
+                        We are here to help you find the right talent for your organization.
+
+                    </p>
+                    <p>Contact us today:</p>
+                    <a class="underline underline-offset-2 font-bold"
+                        href="mailto:info@pioneeracademy.ai">info@pioneeracademy.ai</a>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+<section class=" flex justify-center items-center">
+    <div class="w-1200 py-10 text-center text-green-950">
+        <div>
+            <h3 id="join-us" class="text-xl pt-10 pb-10 lg:text-center uppercase lg:text-3xl font-bold w-full">
+                Interested in
+                joining our program?
+            </h3>
+            <div class="col-span-1 md:border-r-2 md:border-l-2 px-5 text-start">
+                <p>
+                    Our next cohort starts Spring 2026. You must be currently enrolled in or be a graduate of <a
+                        class="font-bold" href="https://www.byupathway.edu/" target="_blank"
+                        rel="noopener noreferrer">Pathway Worldwide</a> BYU
+                    with a
+                    GPA of 3.40 or better. If you haven't yet earned your first certificate you must also have an A- or
+                    better in your CSE
+                    110 Intro to Programming (python) course.
+                </p>
+                <p class="py-5">
+                    If you meet these qualifications and are interested in joining Pioneer Academy, send a copy of your
+                    BYU Pathway
+                    transcript to: <a class="font-bold" href="mailto:info@pioneeracademy.ai">info@pioneeracademy.ai</a>
+                </p>
+            </div>
+        </div>
+
+    </div>
+
 </section>
 <script type="module">
     // const { animate } = window.Motion
