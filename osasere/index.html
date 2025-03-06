@@ -8,7 +8,7 @@
         content="Pioneer AI Academy is a platform that provides training on Artificial Intelligence and Machine Learning.">
     <meta http-equiv="author" content="Osasere Ikponmwosa">
     <title>Pioneer AI Academy </title>
-    <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
+    <script src="./tailwind.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/motion@latest/dist/motion.js"></script>
     <script src="https://unpkg.com/@dotlottie/player-component@2.7.12/dist/dotlottie-player.mjs" type="module"></script>
     <style>
@@ -23,9 +23,9 @@
 </head>
 
 <body class="text-sm lg:text-lg text-slate-800">
-    <nav class="flex z-10 justify-between items-center py-2 text-sm md:text-xl fixed bg-white w-full px-6">
-        <div class="h-11 flex">
-            <img src="/images/icons/favicon.jpeg" class="h-auto object-contain" alt="PIONEER ACADEMY ICON" srcset="">
+    <nav class="flex z-10 justify-between items-center py-3 lg:py-6 text-sm md:text-xl fixed bg-white w-full px-6">
+        <div class="h-11 flex items-center">
+            <img src="./assets/osasere.png" class="h-full pr-4" alt="PIONEER ACADEMY ICON" srcset="">
             <span class="hidden md:block">
                 <h1 class="text-xl font-bold">Pioneer Artificial Intelligence Academy</h1>
             </span>
@@ -34,7 +34,7 @@
             <ul class="flex gap-4 justify-center">
                 <li><a href="#">Home</a></li>
                 <li><a href="#about-us">About Us</a></li>
-                <li><a href="#about-us">Connect With Us</a></li>
+                <li><a href="#connect-with-us">Connect With Us</a></li>
             </ul>
         </div>
     </nav>
@@ -68,7 +68,6 @@
                     background="transparent" class="w-full p-10" speed="0.5" loop autoplay></dotlottie-player>
             </div>
         </div>
-
     </section>
 </body>
 <section class="w-full text-slate-800 px-3 py-20 flex justify-center items-center bg-gray-100 px-">
@@ -511,6 +510,9 @@
                     channel</a> to see the latest work from
                 our graduates.
             </div>
+            <div>
+
+            </div>
             <div class="font-bold text-xl lg:text-3xl lg:text-start py-2 rounded-sm px-2">
                 2024 Capstone Projects
             </div>
@@ -542,15 +544,12 @@
                         <path d="M15.0003 17C15.0003 17 20.0002 13.3176 20.0002 12C20.0002 10.6824 15.0002 7 15.0002 7"
                             stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
                     </svg></span></a></a>
-
             </div>
         </div>
     </div>
 </section>
-<section class="bg-slate-200 py-20 px-5">
-
-    <div class="flex justify-center">
-
+<section id="connect-with-us" class="bg-slate-200 py-20 px-5">
+    <div class="flex lg:py-20 justify-center">
         <div class="w-1200 border-l-2 md:border-l-0 border-slate-500 px-2 text-justify">
             <h3 class="text-xl md:pb-10 pb-3 text-start lg:text-center uppercase lg:text-3xl font-bold w-full">Access
                 Our
@@ -575,26 +574,23 @@
                     </h4>
                     <p class="py-5">
                         We are here to help you find the right talent for your organization.
-
                     </p>
                     <p>Contact us today:</p>
                     <a class="underline underline-offset-2 font-bold"
                         href="mailto:info@pioneeracademy.ai">info@pioneeracademy.ai</a>
                 </div>
             </div>
-
         </div>
     </div>
 </section>
 <section>
-    <h3 id="join-us" class="text-xl pt-10 pb-10 text-center uppercase lg:text-3xl font-bold w-full">
+    <h3 id="join-us" class="text-xl pt-20 lg:pb-10 text-center uppercase lg:text-3xl font-bold w-full">
         Interested in
         joining our program?
     </h3>
     <div class=" flex justify-center px-5 items-center">
         <div class="w-1200 grid items-center grid-cols-1 md:grid-cols-2 py-10 text-center">
             <div class="col-span-1">
-
                 <div class="col-span-1 md:border-l-2 md:px-3 text-start">
                     <p>
                         Our next cohort starts Spring 2026. You must be currently enrolled in or be a graduate of <a
@@ -620,9 +616,10 @@
             </div>
         </div>
     </div>
-
-
 </section>
+<footer class="bg-slate-950">
+
+</footer>
 <script type="module">
     // const { animate } = window.Motion
     // animate("#welcome", { scale: [0.7, 1] }, { duration: 0.5 })
