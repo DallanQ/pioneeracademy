@@ -2,7 +2,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
 
 :root {
-    --primary-color: #2A9D8F;
+    --primary-color: #0A192F;
     --primary-light: #4fb3a7;
     --secondary-color: #264653;
     --accent-color: #E9C46A;
@@ -14,6 +14,9 @@
     --card-shadow: 0 10px 30px rgba(0,0,0,0.1);
     --transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
 }
+
+
+
 
 * {
     margin: 0;
