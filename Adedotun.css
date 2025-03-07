@@ -461,9 +461,7 @@ header.scrolled {
     animation: pulse 2s infinite;
 }
 
-.section-title {
 
-}
 
 @keyframes pulse {
     0% {
