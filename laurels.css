@@ -25,18 +25,21 @@ section, summary, time, mark, audio, video {
 	font: inherit;
 	vertical-align: baseline;}
 
+/* Layout Styles */
 article, aside, details, figcaption, figure,
 footer, header, hgroup, menu, nav, section {
 	display: block;}
 
+/* Typography Styles */
 body {
 	line-height: 1;
 	background: -moz-linear-gradient(top, transparent 0%, rgba(0, 0, 0, 0.8) 100%);
-    background: -webkit-linear-gradient(top, transparent 0%, rgba(0, 0, 0, 0.8) 100%);
-    background: linear-gradient(to bottom, transparent 0%, rgba(0, 0, 0, 0.8) 100%);
-    filter: progid: DXImageTransform.Microsoft.gradient( startColorstr='#00000000', endColorstr='#cc000000', GradientType=0);
+	background: -webkit-linear-gradient(top, transparent 0%, rgba(0, 0, 0, 0.8) 100%);
+	background: linear-gradient(to bottom, transparent 0%, rgba(0, 0, 0, 0.8) 100%);
+	filter: progid: DXImageTransform.Microsoft.gradient( startColorstr='#00000000', endColorstr='#cc000000', GradientType=0);
 }
 
+/* Component Styles */
 ol, ul {
 	list-style: none;
 }
@@ -3406,6 +3409,12 @@ footer {
     padding: 0 20px;
 }
 
+.box-section{
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	gap: 20px;
+}
+
 .feature-card {
     background-color: white;
     border-radius: 15px;
@@ -3490,21 +3499,25 @@ footer {
     color: var(--text-color);
     position: relative;
     padding-left: 20px;
+	text-align: left;
 }
 
-.feature-card ul li::before {
+
+/* .feature-card ul li::before {
     content: '•';
     position: absolute;
     left: 0;
     color: var(--secondary-color);
     font-weight: bold;
-}
+} */
 
-.feature-card ul li strong {
+/* .feature-card ul li strong {
     color: var(--primary-color);
     display: block;
     margin-bottom: 5px;
-}
+} */
+
+
 
 /* ===================================================================
  * # preloader
@@ -3617,6 +3630,7 @@ footer {
 	 -webkit-text-fill-color: #39b54a;
 	 transition: background-color 5000s ease-in-out 0s;
  }
+
 
 .navbar-scrolled {
     background-color: rgba(0, 0, 0, 0.1);
