@@ -503,7 +503,7 @@ header.scrolled {
 }
 
 .feature-box {
-    flex: 0 0 25%; /* Each card takes 25% of the container (3 cards per slide) */
+    flex: 0 0 20%; /* Each card takes 25% of the container (3 cards per slide) */
     background-color: var(--white);
     border-radius: 15px;
     overflow: hidden;
@@ -521,7 +521,7 @@ header.scrolled {
 }
 
 .feature-img1, .feature-img2, .feature-img3, .feature-img4 {
-    height: 200px;
+    height: 800px;
     width: 100%;
     background-color: #ddd;
     background-size: cover;
@@ -530,19 +530,19 @@ header.scrolled {
 }
 
 .feature-img1 {
-    background-image: url('./images/testimony1.jpg');
+    background-image: url('./images/technical.png');
 }
 
 .feature-img2 {
-    background-image: url('./images/testimony2.jpg');
+    background-image: url('./images/professional.png');
 }
 
 .feature-img3 {
-    background-image: url('./images/testimony1.jpg');
+    background-image: url('./images/expertmentorship.png');
 }
 
 .feature-img4 {
-    background-image: url('./images/testimony2.jpg');
+    background-image: url('./images/testimony4.png');
 }
 
 .feature-content {
