@@ -72,31 +72,28 @@ header.scrolled {
     align-items: center;
     max-width: 1200px;
     margin: 0 auto;
-    padding: 0 20px;
+    padding: 0 20px
     position: relative;
 }
 
 .logo {
-    font-size: 24px;
-    font-weight: 700;
-    display: flex;
-    align-items: center;
-}
+ 
 
+    
+    padding: 5px; /* Add padding to prevent cropping */
+    border-radius: 8px; /* Optional: adds rounded corners */
+}
 
 .logo img {
-    margin-top: 17px;
-    width: 120px; /* Increase the size of the logo */
-    height: 120px;
-    position: absolute; /* Position it independently of the header height */
-    top: 50%; /* Center vertically */
-    left: 0; /* Align to the left */
-    transform: translateY(-50%); /* Fine-tune vertical centering */
-    image-rendering: -webkit-optimize-contrast;
-    image-rendering: crisp-edges;
-    object-fit: contain;
+    margin-top: 2px;
+    width: 80px;
+    height: 80px;
+    transform: scale(1.9); /* Increase the scaling factor for a larger size */
+    transform-origin: center;
+    image-rendering: -webkit-optimize-contrast; /* Improves sharpness */
+    image-rendering: crisp-edges; /* Keeps edges clean */
+    object-fit: contain; /* Ensures the image maintains its aspect ratio */
 }
-
 
 /*.logo-icon {
     
