@@ -67,12 +67,13 @@ header.scrolled {
 }
 
 .header-container {
+
     display: flex;
     justify-content: space-between;
     align-items: center;
     max-width: 1200px;
     margin: 0 auto;
-    padding: 0 20px
+    padding: 0 20px;
     position: relative;
 }
 
@@ -80,20 +81,26 @@ header.scrolled {
  
 
     
-    padding: 5px; /* Add padding to prevent cropping */
+     /* Add padding to prevent cropping */
     border-radius: 8px; /* Optional: adds rounded corners */
 }
 
 .logo img {
-    margin-top: 2px;
-    width: 80px;
-    height: 80px;
-    transform: scale(1.9); /* Increase the scaling factor for a larger size */
-    transform-origin: center;
-    image-rendering: -webkit-optimize-contrast; /* Improves sharpness */
-    image-rendering: crisp-edges; /* Keeps edges clean */
-    object-fit: contain; /* Ensures the image maintains its aspect ratio */
+    margin-top: 22px;
+    border-radius: 10px;
+    border: 1px solid #f0d488;
+    
+    width: 129px; /* Increase the size of the logo */
+    height: 105px;
+    position: absolute; /* Position it independently of the header height */
+    top: 50%; /* Center vertically */
+    left: 0; /* Align to the left */
+    transform: translateY(-50%); /* Fine-tune vertical centering */
+    image-rendering: -webkit-optimize-contrast;
+   
+    object-fit: contain;
 }
+
 
 /*.logo-icon {
     
