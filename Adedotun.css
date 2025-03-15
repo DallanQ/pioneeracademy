@@ -86,12 +86,12 @@ header.scrolled {
 }
 
 .logo img {
-    margin-top: 22px;
+    margin-top: 10px;
     border-radius: 10px;
     border: 1px solid #f0d488;
     
-    width: 129px; /* Increase the size of the logo */
-    height: 105px;
+    width: 110px; /* Increase the size of the logo */
+    height: 89px;
     position: absolute; /* Position it independently of the header height */
     top: 50%; /* Center vertically */
     left: 0; /* Align to the left */
