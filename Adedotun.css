@@ -53,7 +53,7 @@ h2 {
 header {
     background: linear-gradient(135deg, var(--secondary-color), var(--primary-color));
     color: var(--white);
-    padding: 20px 0;
+    padding: 0px 0;
     position: fixed;
     top: 0;
     width: 100%;
@@ -78,26 +78,17 @@ header.scrolled {
 }
 
 .logo {
- 
 
-    
-     /* Add padding to prevent cropping */
-    border-radius: 8px; /* Optional: adds rounded corners */
+    border-radius: 8px; 
 }
 
 .logo img {
-    margin-top: 12px;
-    border-radius: 10px;
-    border: 1px solid #f0d488;
-    
-    width: 108px; /* Increase the size of the logo */
+    margin-top: 2px;
+    border: 0px solid #f0d488;
+    width: 108px; 
     height: 90px;
-    position: absolute; /* Position it independently of the header height */
-    top: 50%; /* Center vertically */
-    left: 0; /* Align to the left */
-    transform: translateY(-50%); /* Fine-tune vertical centering */
+    left: 0;
     image-rendering: -webkit-optimize-contrast;
-   
     object-fit: contain;
 }
 
