@@ -1409,18 +1409,18 @@ footer p {
     .testimonial-content {
       height: 300px; /* Increased from 220px to 300px for very small screens */
     }
-    
+
     .testimonial-footer {
       flex-direction: row;
       align-items: center;
     }
-    
+
     .testimonial-image {
       width: 50px;
       height: 50px;
       min-width: 50px;
     }
-    
+
     .testimonial-info {
       margin-left: 10px;
     }
